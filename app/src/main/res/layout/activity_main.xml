@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:color/darker_gray">
+
+        </View>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/real" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="0"
+                android:id="@+id/real_score"
+                android:layout_marginTop="40dp"
+                android:textSize="60sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textSize="60sp"
+                android:text="-"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/barca_score"
+                android:text="0"
+                android:layout_marginTop="40dp"
+                android:textSize="60sp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="95dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/barca" />
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:orientation="vertical"
+           android:padding="16dp"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="24sp"
+               android:text="RMA"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="36sp"
+               android:text="0"
+               android:id="@+id/rma_goal"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="36sp"
+               android:layout_gravity="center_horizontal"
+               android:text="0"
+               android:id="@+id/rma_foul"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="36sp"
+               android:text="0"
+               android:id="@+id/rma_corner"
+               android:layout_height="wrap_content" />
+
+
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="2"
+           android:layout_marginTop="46dp"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="50dp"
+                   android:onClick="rma_goal"
+                   android:id="@+id/rma_goal_incre"
+                   android:text="+"
+                   />
+
+               <TextView
+                   android:text="GOALS"
+                   android:layout_marginLeft="16dp"
+
+                   android:layout_width="0dp"
+                   android:layout_weight="2"
+                   android:paddingLeft="4dp"
+                   android:layout_height="wrap_content" />
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="50dp"
+                   android:onClick="fcb_goal"
+                   android:id="@+id/fcb_goal_incre"
+                   android:text="+"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:onClick="rmaFoul"
+                   android:layout_height="50dp"
+                   android:id="@+id/rma_foul_incre"
+                   android:text="+"
+                   />
+
+               <TextView
+                   android:text="FOULS"
+
+                   android:layout_marginLeft="16dp"
+
+                   android:layout_width="0dp"
+                   android:layout_weight="2"
+                   android:paddingLeft="4dp"
+
+                   android:layout_height="wrap_content" />
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:onClick="fcbFoul"
+                   android:id="@+id/fcb_foul_incre"
+                   android:layout_height="50dp"
+                   android:text="+"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="50dp"
+                   android:onClick="rmaCorner"
+                   android:id="@+id/rma_corner_incre"
+                   android:text="+"
+                   />
+
+               <TextView
+                   android:text="CORNERS"
+
+                   android:layout_marginLeft="16dp"
+
+                   android:layout_width="0dp"
+                   android:layout_weight="2"
+                   android:paddingLeft="4dp"
+
+                   android:layout_height="wrap_content" />
+
+               <Button
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="50dp"
+                   android:onClick="fcbCorner"
+                   android:id="@+id/fcb_corner_incre"
+                   android:text="+"
+                   />
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:padding="16dp"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="24sp"
+               android:layout_gravity="center_horizontal"
+               android:text="FCB"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="36sp"
+               android:text="0"
+               android:id="@+id/fcb_goal"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="36sp"
+               android:text="0"
+               android:id="@+id/fcb_foul"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:textSize="36sp"
+               android:text="0"
+               android:id="@+id/fcb_corner"
+               android:layout_height="wrap_content" />
+
+
+
+       </LinearLayout>
+
+
+   </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Reset"
+        android:id="@+id/reset"
+        android:onClick="reset"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
